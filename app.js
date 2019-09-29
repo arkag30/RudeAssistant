@@ -27,11 +27,12 @@ btn.addEventListener('click',()=>{
 
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance();
-    speech.text="Shut up and Stop Bugging me";
-    if(message.includes('how are you')){
-       const finalText= greetings[Math.floor(Math.random()*greetings.length)];
-        speech.text=finalText;
-    }
+     speech.text="Shut up and Stop Bugging me";
+     if(message.includes('how are you')){
+        const finalText= greetings[Math.floor(Math.random()*greetings.length)];
+         speech.text=finalText;
+     }
+    speech.text=message;
     speech.volume= 1;
     speech.rate= 1;
     speech.pitch= 1;
