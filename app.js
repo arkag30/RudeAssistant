@@ -2,12 +2,12 @@ const btn=document.querySelector('.talk');
 const content = document.querySelector('.content');
 const greetings = [ 
     'Im good you little piece of shit',
-    'Im am tired of you asking me stupid questions',
+    'Im tired of you asking me stupid questions',
     'please keep quite'
 ];
 const weather = ['How does it matter you are not even going to go out you lazy Bastard'];
 const hi=['hello you little goofball'];
-const propose=['get a room','you are soooo lonely','i hate you'];
+const pro=['get a room','you are soooo lonely','i hate you'];
 const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
@@ -30,7 +30,7 @@ btn.addEventListener('click',()=>{
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance(message);
      speech.text="Shut up and Stop Bugging me";
-      if(message.includes('how are you'||message.includes('whats up'))){
+      if(message.includes('how are you'||message.includes('what up'))){
          const finalText= greetings[Math.floor(Math.random()*greetings.length)];
       speech.text=finalText;
      }
@@ -43,7 +43,7 @@ function readOutLoud(message){
      speech.text=finalText;
     }
     if(message.includes('i love you')){
-        const finalText= propose[Math.floor(Math.random()*propose.length)];
+        const finalText= pro[Math.floor(Math.random()*pro.length)];
      speech.text=finalText;
     }
     speech.volume= 1;
