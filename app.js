@@ -44,6 +44,9 @@ function readOutLoud(message){
     else if(message.includes('love')){
      speech.text="I Hate You So Much";
     }
+    else if(message.includes('invented you')||message.includes('created you')){
+        speech.text="Arka Ghosh";
+    }
     else{speech.text="Shut up and Stop Bugging me";}
     speech.volume= 1;
     speech.rate= 1;
