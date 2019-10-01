@@ -42,8 +42,7 @@ function readOutLoud(message){
      speech.text=finalText;
     }
     else if(message.includes('i love you')){
-        const finalText= pro[Math.floor(Math.random()*pro.length)];
-     speech.text=finalText;
+     speech.text="I Hate You So Much";
     }
     else{speech.text="Shut up and Stop Bugging me";}
     speech.volume= 1;
