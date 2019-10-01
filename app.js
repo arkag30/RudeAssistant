@@ -37,13 +37,13 @@ function readOutLoud(message){
         const finalText= weather;
      speech.text=finalText;
     }
-    else if(message.includes('hello')||message.includes('hi')){
-        const finalText= hi;
-     speech.text=finalText;
-    }
-    else if(message.includes('love')){
-     speech.text="I Hate You So Much";
-    }
+    // else if(message.includes('hello')||message.includes('hi')){
+    //     const finalText= hi;
+    //  speech.text=finalText;
+    // }
+    // else if(message.includes('love')){
+    //  speech.text="I Hate You So Much";
+    // }
     else if(message.includes('invented you')||message.includes('created you')){
         speech.text="Arka Ghosh";
     }
