@@ -7,7 +7,7 @@ const greetings = [
 ];
 const weather = ['How does it matter you are not even going to go out you lazy Bastard'];
 const hi=['hello you little goofball'];
-const pro=['get a room','you are soooo lonely','i hate you'];
+//const pro=['get a room','you are soooo lonely','i hate you'];
 const SpeechRecognition=window.SpeechRecognition||window.webkitSpeechRecognition;
 const recognition = new SpeechRecognition();
 
@@ -41,7 +41,7 @@ function readOutLoud(message){
         const finalText= hi;
      speech.text=finalText;
     }
-    else if(message.includes('i love you')){
+    else if(message.includes('love')){
      speech.text="I Hate You So Much";
     }
     else{speech.text="Shut up and Stop Bugging me";}
