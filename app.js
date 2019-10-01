@@ -29,23 +29,23 @@ btn.addEventListener('click',()=>{
 
 function readOutLoud(message){
     const speech = new SpeechSynthesisUtterance(message);
-     speech.text="Shut up and Stop Bugging me";
-      if(message.includes('how are you'||message.includes('what up'))){
+      if(message.includes('how are you')||message.includes('what up')){
          const finalText= greetings[Math.floor(Math.random()*greetings.length)];
       speech.text=finalText;
      }
-     if(message.includes('weather')){
+     else if(message.includes('weather')){
         const finalText= weather;
      speech.text=finalText;
     }
-    if(message.includes('hello')||message.includes('hi')){
+    else if(message.includes('hello')||message.includes('hi')){
         const finalText= hi;
      speech.text=finalText;
     }
-    if(message.includes('i love you')){
+    else if(message.includes('i love you')){
         const finalText= pro[Math.floor(Math.random()*pro.length)];
      speech.text=finalText;
     }
+    else{speech.text="Shut up and Stop Bugging me";}
     speech.volume= 1;
     speech.rate= 1;
     speech.pitch= 1;
